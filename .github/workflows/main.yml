@@ -18,7 +18,6 @@ jobs:
     - name: Build
       run: |
         npm run build
-        gh-pages -d build
       env:
         REACT_APP_EMAIL_SERVICE: ${{ secrets.REACT_APP_EMAIL_SERVICE }}
         REACT_APP_EMAIL_TEMPLETE: ${{ secrets.REACT_APP_EMAIL_TEMPLETE }}
