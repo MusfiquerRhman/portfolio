@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import './btn';
+
+:root {
+	--color-bg: #000B11;
+	// --color-bg: #fff;
+	--color-bg-variant: #1c1c1c;
+	--color-primary: rgb(0, 137, 123);
+	--primary-color-light: rgba(0, 88, 80, 0.65);
+	--primary-color-variant: rgba(0, 88, 80, 0.2);
+	--color-white: rgb(255, 255, 255);
+	--color-light: rgba(255, 255, 255, 0.75);
+	
+
+	--container-width-lg: 75%;
+	--container-width-md: 86%;
+	--container-width-sm: 90%;
+	--container-width-xl: 60%;
+
+	--transition: all 400ms ease;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: var(--color-bg);
+	color: var(--color-white);
+	line-height: 1.7;
+	background-size: 100vw 100vh;
+
+	&::-webkit-scrollbar {
+        width: 0.3rem;
+
+        &-thumb {
+            background: var(--color-primary);
+			border-radius: 10px;
+        }
+    }
+}
+
+
+.container {
+	width: var(--container-width-lg);
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+section {
+	margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
+	text-align: center;
+	color: var(--color-light);
+}
+
+section > h2 {
+	color: var(--color-primary);
+	margin-bottom: 3rem;
+}
+
+.text-light {
+	color: var(--color-light);
+}
+
+a {
+	color: var(--color-primary);
+	transition: var(--transition);
+}
+
+a:hover {
+	color: var(--color-white);
+}
+
+
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+@media screen and (min-width: 2160px) {
+	h5 {
+		font-size: 2.5rem;
+	}
+	h1 {
+		font-size: 6rem;
+	}
+	h2 {
+		font-size: 5rem;
+	}
+
+	.container {
+		width: var(--container-width-xl);
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+
+	section {
+		margin-top: 6rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+
+	section > h2 {
+		margin-bottom: 2rem;
+	}
+}
+
+
+
+
