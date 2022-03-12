@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.8ebff791.css",
+    "main.js": "/portfolio/static/js/main.d9192755.js",
+    "static/media/about04.png": "/portfolio/static/media/about04.fa7b3a72ed32b0e25bfb.png",
+    "static/media/about02.png": "/portfolio/static/media/about02.7a3df03410ee756268ec.png",
+    "static/media/Resume_Musfiquer_Rhman.pdf": "/portfolio/static/media/Resume_Musfiquer_Rhman.09f8da6daa53e7e26f30.pdf",
+    "static/media/about01.png": "/portfolio/static/media/about01.080509de05322b7aafda.png",
+    "static/media/about03.png": "/portfolio/static/media/about03.c26c2547bb1a423cf283.png",
+    "static/media/about.webp": "/portfolio/static/media/about.3c5587c9f8e7236f6d9d.webp",
+    "static/media/hackerman.png": "/portfolio/static/media/hackerman.ed720abdf64a410c68cb.png",
+    "index.html": "/portfolio/index.html",
+    "main.8ebff791.css.map": "/portfolio/static/css/main.8ebff791.css.map",
+    "main.d9192755.js.map": "/portfolio/static/js/main.d9192755.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ebff791.css",
+    "static/js/main.d9192755.js"
+  ]
+}
