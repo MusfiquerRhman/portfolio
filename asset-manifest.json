@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.8ebff791.css",
-    "main.js": "/portfolio/static/js/main.9a117447.js",
+    "main.js": "/portfolio/static/js/main.2f3591b5.js",
     "static/media/about04.png": "/portfolio/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/portfolio/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/Resume_Musfiquer_Rhman.pdf": "/portfolio/static/media/Resume_Musfiquer_Rhman.09f8da6daa53e7e26f30.pdf",
@@ -11,10 +11,10 @@
     "static/media/hackerman.png": "/portfolio/static/media/hackerman.ed720abdf64a410c68cb.png",
     "index.html": "/portfolio/index.html",
     "main.8ebff791.css.map": "/portfolio/static/css/main.8ebff791.css.map",
-    "main.9a117447.js.map": "/portfolio/static/js/main.9a117447.js.map"
+    "main.2f3591b5.js.map": "/portfolio/static/js/main.2f3591b5.js.map"
   },
   "entrypoints": [
     "static/css/main.8ebff791.css",
-    "static/js/main.9a117447.js"
+    "static/js/main.2f3591b5.js"
   ]
 }
