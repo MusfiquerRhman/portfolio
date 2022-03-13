@@ -53,7 +53,7 @@ const About = () => {
                         </article> 
                     </div>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, natus. Eaque, esse eum rerum odio quibusdam nam tempore reprehenderit velit? Magni sunt laborum perferendis ab molestiae corporis ipsa deleniti maiores. Eos necessitatibus vitae sequi repellat esse quae modi fugiat minima quas est quam, tenetur ab rerum laborum deleniti earum animi.</p>
+                    <p>I am self-motivated hard working and energetic. I am willing to build up my career in a challenging profession where I can apply my educational skills. I try my best to prove myself effective and highly energetic person to face my challenge.</p>
                     <a href="#contact" className='btn'>
                         <span></span>
                         <span></span>

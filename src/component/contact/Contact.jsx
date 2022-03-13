@@ -38,6 +38,9 @@ const Contact = () => {
 					setButtonText("Send Another Message!")
 				}, 5000)
 			}
+		}, (error) => {
+			enqueueSnackbar("Failed to send message!", {variant: 'error'});
+			setButtonText('Failed!');
 		});
 
 		e.target.reset();

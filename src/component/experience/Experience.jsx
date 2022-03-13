@@ -93,18 +93,18 @@ const Experience = () => {
 							</div>
 						</article>
 
-						<article className='experience__details'>
+						{/* <article className='experience__details'>
 							<BsFillPatchCheckFill className='experience__details-icons' />
 							<div>
 								<h4>React native</h4>
 								<small className='text-light'>Intermediet</small>
 							</div>
-						</article>
+						</article> */}
 
 						<article className='experience__details'>
 							<BsFillPatchCheckFill className='experience__details-icons' />
 							<div>
-								<h4>Machine Learning</h4>
+								<h4>SCSS</h4>
 								<small className='text-light'>Intermediet</small>
 							</div>
 						</article>
