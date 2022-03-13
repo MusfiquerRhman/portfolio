@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      REACT_APP_EMAIL_SERVICE: ${{ secrets.REACT_APP_EMAIL_SERVICE }}
+      REACT_APP_EMAIL_TEMPLETE: ${{ secrets.REACT_APP_EMAIL_TEMPLETE }}
+      REACT_APP_USER_ID: ${{ secrets.REACT_APP_USER_ID }}
