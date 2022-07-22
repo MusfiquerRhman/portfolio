@@ -1,6 +1,6 @@
 import React, {useEffect, useContext} from 'react'
 import { BsFillPatchCheckFill } from 'react-icons/bs'
-import './experience.scss'
+import {GlobalStyles} from'./experienceStyle.js'
 import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
 
@@ -16,6 +16,8 @@ const Experience = () => {
 
 
 	return (
+		<>
+		<GlobalStyles />
 		<section id='experience' ref={setRef}>
 			<h5>What Skills I have</h5>
 			<h2>My Experience</h2>
@@ -112,6 +114,7 @@ const Experience = () => {
 				</div>
 			</div>
 		</section>
+	</>
 	)
 }
 

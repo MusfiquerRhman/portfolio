@@ -1,43 +1,47 @@
-.about__container {
-    display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
-    align-items: center;
-    justify-content: center;
-}
+import { createGlobalStyle } from "styled-components"
 
-.about__me {
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary));
-    display: grid;
-    place-items: center;
+export const GlobalStyles = createGlobalStyle`
+    .about__container {
+        display: grid;
+        grid-template-columns: 35% 50%;
+        gap: 15%;
+        align-items: center;
+        justify-content: center;
+    }
 
-    &-image {
-        overflow: hidden;
+    .about__me {
+        width: 100%;
+        aspect-ratio: 1/1;
         border-radius: 2rem;
-        transform: rotate(10deg);
-        transition: var(--transition);
-        
+        background: linear-gradient(45deg, transparent, ${(props) => props.theme.primary});
+        display: grid;
+        place-items: center;
 
-        img {
-            aspect-ratio: 1/1;
-        }
+        &-image {
+            overflow: hidden;
+            border-radius: 2rem;
+            transform: rotate(10deg);
+            transition: var(--transition);
+            
 
-        &:hover {
-            transform: rotate(0);
+            img {
+                aspect-ratio: 1/1;
+            }
+
+            &:hover {
+                transform: rotate(0);
+            }
         }
     }
-}
 
 .about__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    color: ${(props) => props.theme.white};
 
     small {
-        color: var(--color-light);
+        color: #DDD;
         font-size: 0.8rem;
     }
 }
@@ -48,7 +52,7 @@
 }
 
 .about__card {
-    background: var(--primary-color-variant);
+    background: ${(props) => props.theme.primaryColorLight};
     border: 1px solid transparent;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -68,6 +72,7 @@
 .about__content p {
     margin: 2rem 0 2.5rem;
     text-align: justify;
+    color: ${(props) => props.theme.textColor}
 }
 
 .about__content .btn {
@@ -146,3 +151,4 @@
         margin: 1.5rem 0;
     }
 }
+`

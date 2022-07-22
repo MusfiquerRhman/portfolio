@@ -1,11 +1,13 @@
 import React from 'react'
-import './footer.scss'
+import {GlobalStyles} from './footerStyle'
 import {FaGithubSquare, FaFacebookSquare} from 'react-icons/fa'
 import {BsLinkedin} from 'react-icons/bs'
 
 const Footer = () => {
 	return (
-		<footer className=''>
+		<>
+			<GlobalStyles />
+			<footer className=''>
 			<a href='#header' className='footer__logo'>Musfiquer Rhman</a>
 
 			<div className='footer__social'>
@@ -14,6 +16,7 @@ const Footer = () => {
 				<a href='https://www.facebook.com/musfiquerrhman' target='_blank' rel="noreferrer" ><FaFacebookSquare /></a>
 			</div>
 		</footer>
+		</>
 	)
 }
 

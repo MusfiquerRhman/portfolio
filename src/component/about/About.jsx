@@ -1,9 +1,9 @@
-import React, {useEffect, useState, useContext} from 'react'
-import './about.scss'
+import React, {useEffect, useContext} from 'react'
 import ME from '../../assests/about.webp'
-import {BsClockHistory, BsPeopleFill, BsJournalText} from 'react-icons/bs'
+import {BsClockHistory, BsPeopleFill} from 'react-icons/bs'
 import {GoRocket} from 'react-icons/go'
 import useOnScreen from '../../hooks/useOnScreen'
+import {GlobalStyles} from './aboutStyle'
 import { InteractionContext } from '../../context APIs/interactionAPI'
 
 
@@ -15,9 +15,11 @@ const About = () => {
         if(visible){
             setInView('#about')
         }
-    }, [setRef, visible])
+    }, [setInView, setRef, visible])
 
     return (
+        <>
+        <GlobalStyles />
         <section id='about' ref={setRef}>
             <h5>Get to know</h5> 
             <h2>About Me</h2>   
@@ -34,7 +36,7 @@ const About = () => {
                         <article className='about__card'>
                             <BsClockHistory className='about__icon'/>
                             <h5>Experience</h5>
-                            <small>3+ years of Experience</small>
+                            <small>~1 years of Experience</small>
                         </article>    
                         <article className='about__card'>
                             <BsPeopleFill className='about__icon'/>
@@ -45,11 +47,6 @@ const About = () => {
                             <GoRocket className='about__icon'/>
                             <h5>Projects</h5>
                             <small>10+ projects</small>
-                        </article> 
-                        <article className='about__card'>
-                            <BsJournalText className='about__icon'/>
-                            <h5>Publications</h5>
-                            <small>1 Journal paper</small>
                         </article> 
                     </div>
 
@@ -64,6 +61,7 @@ const About = () => {
                 </div>
             </div>
         </section>
+        </>
     )
 }
 

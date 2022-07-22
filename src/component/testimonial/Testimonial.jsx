@@ -2,8 +2,8 @@ import React, { useEffect, useContext } from 'react'
 import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
 import cliantAvater from '../../assests/hackerman.png';
-import './testimonial.scss'
-
+import './testimonialStyle.js'
+import {GlobalStyles} from './testimonialStyle'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -39,8 +39,6 @@ const data = [
 
 ]
 
-
-
 const Testimonial = () => {
 	const { setInView } = useContext(InteractionContext);
 	const [setRef, visible] = useOnScreen({ threshold: 0.7 });
@@ -52,6 +50,8 @@ const Testimonial = () => {
 	}, [setRef, visible])
 
 	return (
+		<>
+		<GlobalStyles/>
 		<section id='testimonial' ref={setRef}>
 			<h5>Review from clients</h5>
 			<h2>Testimonials</h2>
@@ -75,6 +75,7 @@ const Testimonial = () => {
 				))}
 			</Swiper>
 		</section>
+		</>
 	)
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
-import './portfolio.scss'
+import {GlobalStyles} from './portfolioStyles'
 import about01 from '../../assests/about01.png'
 import about02 from '../../assests/about02.png'
 import about03 from '../../assests/about03.png'
@@ -63,6 +63,8 @@ const Portfolio = () => {
 	};
 
 	return (
+		<>
+		<GlobalStyles />
 		<section id='portfolio' ref={setRef}>
 			<h5>My Recent Works</h5>
 			<h2>Portfolio</h2>
@@ -102,6 +104,7 @@ const Portfolio = () => {
 				))}
 			</div>
 		</section>
+		</>
 	)
 }
 

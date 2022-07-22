@@ -1,10 +1,11 @@
 import React, {useContext, useEffect} from 'react'
-import './header.scss'
+import { GlobalStyles } from './headerStyles'
 import CTA from './CTA'
 import ME from '../../assests/hackerman.png'
 import HeaderSocials from './headerSocials'
 import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
+import Toggle from './themeToggle'
 
 const Header = () => {
 	const {setInView} = useContext(InteractionContext);
@@ -18,6 +19,8 @@ const Header = () => {
 
 
     return (
+		<>
+		<GlobalStyles/>
 		<header id='header' ref={setRef}>
 			<div className="container header__container">
 				<h5>Hello, I am</h5>
@@ -30,9 +33,10 @@ const Header = () => {
 					<img src={ME} alt='me' />
 				</div>
 
-				<a href='#contact' className='scroll__down'>Scroll Down</a>
+				<Toggle />
 			</div>
 		</header>
+	</>
     )
 }
 
