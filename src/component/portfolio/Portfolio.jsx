@@ -75,7 +75,7 @@ const Portfolio = () => {
 					<div
 						key={index}
 						onClick={() => handleWorkFilter(item)}
-						className={`portfolio__filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+						className={`portfolio__filter-item ${activeFilter === item ? 'item-active' : ''}`}
 					>
 						{item}
 					</div>

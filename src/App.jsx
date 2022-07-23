@@ -4,16 +4,18 @@ import { About, Contact, Experience, Footer, Header, NavBar, Testimonial, Portfo
 import { SnackbarProvider } from 'notistack';
 import styled, {ThemeProvider} from 'styled-components';
 import {ThemeContextAPI} from './context APIs/themeContextAPI'
+import { AccentContextAPI } from "./context APIs/accentContextAPI";
 import {lightTheme, darkTheme, GlobalStyles} from './theme'
 
 const StyledApp = styled.div``
 
 function App() {
 	const {theme} = useContext(ThemeContextAPI);
+	const {accent} = useContext(AccentContextAPI);
 
 	return (
 		<StyledApp>
-			<ThemeProvider theme={theme === "light" ? lightTheme: darkTheme}>
+			<ThemeProvider theme={theme === "light" ? lightTheme(accent): darkTheme(accent)}>
 				<SnackbarProvider maxSnack={3}>
 					<InteractionProvider>
 						<GlobalStyles/>

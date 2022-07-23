@@ -23,6 +23,8 @@ export const GlobalStyles = createGlobalStyle`
             font-size: 1.1rem;
             left: 50%;
             transform: translate(-50%);
+            background: ${(props) => props.theme.primary};
+            color: ${(props) => props.theme.white};
         }
 
         .contact__options {

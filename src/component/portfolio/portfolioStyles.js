@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         gap: 2.5rem;
         color: ${(props) => props.theme.white}
     }
-
+    
     .portfolio__item {
         background: ${(props) => props.theme.primaryColorLight};
         padding: 0.5rem;
@@ -121,7 +121,7 @@ export const GlobalStyles = createGlobalStyle`
             background-color: #fff;
             color: #000;
             font-weight: 800;
-
+            box-shadow: 0 0 2px 0 ${(props) => props.theme.colorLight};
             cursor: pointer;
             transition: all 0.3s ease;
             margin: 0.5rem;

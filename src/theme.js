@@ -1,28 +1,85 @@
 import { createGlobalStyle } from "styled-components"
 
-export const lightTheme = () => {
+const commonColors = {
+	primaryColorVariant: "rgba(0, 88, 80, 0.2)",
+	white: "#FFFFFF"
+}
+
+const commonLighColors = {
+	backgound: "#FFFFFF",
+	textColor: "#000000",
+	colorLight: "rgba(0, 0, 0, 0.75)",
+}
+
+const commonDarkColors = {
+	backgound: "#000B11",
+	textColor: "#FFFFFF",
+	colorLight: "rgba(255, 255, 255, 0.75)",
+}
+
+export const lightTheme = (accent) => {
+	let accentColors = {};
+	if(accent === 'teal'){
+		accentColors.primaryColorLight = "rgba(0, 88, 80, 0.85)";
+		accentColors.primary = "rgb(0, 137, 123)";
+	}
+	else if(accent === 'red'){
+		accentColors.primaryColorLight = "rgba(244, 67, 54, 0.85)";
+		accentColors.primary = "rgb(244, 67, 54)";
+	}
+	else if(accent === 'pink'){
+		accentColors.primaryColorLight = "rgba(233, 30, 99, 0.85)";
+		accentColors.primary = "rgb(233, 30, 99)";
+	}
+	else if(accent === 'purple'){
+		accentColors.primaryColorLight = "rgba(165, 39, 176, 0.85)";
+		accentColors.primary = "rgb(165, 39, 176)";
+	}
+	else if(accent === 'blue'){
+		accentColors.primaryColorLight = "rgba(33, 150, 243, 0.85)";
+		accentColors.primary = "rgb(33, 150, 243)";
+	}
+	else if(accent === 'green'){
+		accentColors.primaryColorLight = "rgba(67, 160, 71, 0.85)";
+		accentColors.primary = "rgb(67, 160, 71)";
+	}
 	return {
-		backgound: "#FFFFFF",
-		variant: "#1c1c1c",
-		primary: "rgb(0, 137, 123)",
-		primaryColorLight: "rgba(0, 88, 80, 0.85)",
-		primaryColorVariant: "rgba(0, 88, 80, 0.2)",
-		textColor: "#000000",
-		colorLight: "rgba(0, 0, 0, 0.75)",
-		white: "#FFFFFF"
+		...accentColors, 
+		...commonLighColors, 
+		...commonColors
 	}
 }
 
-export const darkTheme = () => {
+export const darkTheme = (accent) => {
+	let accentColors = {};
+	if(accent === 'teal'){
+		accentColors.primaryColorLight = "rgba(0, 88, 80, 0.65)";
+		accentColors.primary = "rgb(0, 137, 123)";
+	}
+	else if(accent === 'red'){
+		accentColors.primaryColorLight = "rgba(244, 67, 54, 0.65)";
+		accentColors.primary = "rgb(244, 67, 54)";
+	}
+	else if(accent === 'pink'){
+		accentColors.primaryColorLight = "rgba(233, 30, 99, 0.65)";
+		accentColors.primary = "rgb(233, 30, 99)";
+	}
+	else if(accent === 'purple'){
+		accentColors.primaryColorLight = "rgba(165, 39, 176, 0.65)";
+		accentColors.primary = "rgb(165, 39, 176)";
+	}
+	else if(accent === 'blue'){
+		accentColors.primaryColorLight = "rgba(33, 150, 243, 0.65)";
+		accentColors.primary = "rgb(33, 150, 243)";
+	}
+	else if(accent === 'green'){
+		accentColors.primaryColorLight = "rgba(67, 160, 71, 0.65)";
+		accentColors.primary = "rgb(67, 160, 71)";
+	}
 	return {
-		backgound: "#000B11",
-		variant: "#1c1c1c",
-		primary: "rgb(0, 137, 123)",
-		primaryColorLight: "rgba(0, 88, 80, 0.65)",
-		primaryColorVariant: "rgba(0, 88, 80, 0.2)",
-		textColor: "#FFFFFF",
-		colorLight: "rgba(255, 255, 255, 0.75)",
-		white: "#FFFFFF"
+		...accentColors,
+		...commonDarkColors,
+		...commonColors
 	}
 }
 
@@ -47,27 +104,25 @@ export const GlobalStyles = createGlobalStyle`
 		line-height: 1.7;
 		background-size: 100vw 100vh;
 		transition: 0.5s;
+
+		&::-webkit-scrollbar {
+			width: 0.3rem;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: ${(props) => props.theme.primary};
+			border-radius: 10px;
+		}
 	}
 
-	body::-webkit-scrollbar {
-		width: 0.3rem;
-	}
 
-	body::-webkit-scrollbar-thumb {
-		background: ${(props) => props.theme.primary};
-		border-radius: 10px;
-	}
 
 	.container {
 		width: var(--container-width-lg);
 		margin: 0 auto;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5 {
+	h1, h2,	h3,	h4,	h5 {
 		font-weight: 400;
 	}
 
@@ -79,8 +134,7 @@ export const GlobalStyles = createGlobalStyle`
 		margin-top: 8rem;
 	}
 
-	section > h2,
-	section > h5 {
+	section > h2, section > h5 {
 		text-align: center;
 		color: ${(props) => props.theme.colorLight};
 	}
@@ -97,22 +151,22 @@ export const GlobalStyles = createGlobalStyle`
 	a {
 		color: ${(props) => props.theme.primary};
 		transition: var(--transition);
-	}
 
-	a:hover {
-		color: ${(props) => props.theme.textColor};
+		&:hover {
+			color: ${(props) => props.theme.textColor};
+		}
 	}
-
 
 	img {
 		display: block;
 		width: 100%;
 		object-fit: cover;
 	}
+
 	.btn {
 		width: max-content;
 		display: inline-block;
-		color: ${(props) => props.theme.primary};
+		color: ${(props) => props.theme.white};
 		padding: 0.75rem;
 		cursor: pointer;
 		overflow: hidden;
@@ -120,121 +174,126 @@ export const GlobalStyles = createGlobalStyle`
 		color: ${(props) => props.theme.textColor};
 		box-shadow: 0.1rem 0.1rem 0.2rem 0 ${(props) => props.theme.primary};
 		border-radius: 2px;
-	}
+		
 
-	
-	.btn span{
-		position: absolute;
-		display: block;
-	}
-				
-	.btn span:nth-child(1){
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 0;
-	}
 
-	.btn span:nth-child(3){
-		bottom: 0;
-		right: -100%;
-		width: 100%;
-		height: 0;
-	}
+		& span{
+			position: absolute;
+			display: block;
+		}
+					
+		& span:nth-child(1){
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 0;
+		}
 
-	.btn span:nth-child(2){
-		top: -100%;
-		right: 0;
-		width: 0;
-		height: 100%;
-	}
-	
-	.btn span:nth-child(4){
-		bottom: -100%;
-		left: 0;
-		width: 0;
-		height: 100%;
-	}
+		& span:nth-child(3){
+			bottom: 0;
+			right: -100%;
+			width: 100%;
+			height: 0;
+		}
 
-	
-	.btn:hover, .btn:focus {
-		transform: translateY(-3px);
-			-webkit-transform: translateY(-3px);
-			-moz-transform: translateY(-3px);
-			-ms-transform: translateY(-3px);
-			-o-transform: translateY(-3px);
+		& span:nth-child(2){
+			top: -100%;
+			right: 0;
+			width: 0;
+			height: 100%;
+		}
+		
+		& span:nth-child(4){
+			bottom: -100%;
+			left: 0;
+			width: 0;
+			height: 100%;
+		}
+
+		&:hover, &:focus {
+			transform: translateY(-3px);
 			box-shadow: 0 0 1rem 0 ${(props) => props.theme.primary};
-			-webkit-box-reflect: below 0 linear-gradient(transparent, ${(props) => props.theme.primary});
-	}
+				-webkit-transform: translateY(-3px);
+				-moz-transform: translateY(-3px);
+				-ms-transform: translateY(-3px);
+				-o-transform: translateY(-3px);
+				-webkit-box-reflect: below 0 linear-gradient(transparent, ${(props) => props.theme.primary});
+		}
 
-	.btn:active {
-		transform: translateY(3px);
-			-webkit-transform: translateY(3px);
-			-moz-transform: translateY(3px);
-			-ms-transform: translateY(3px);
-			-o-transform: translateY(3px);
+		&:active {
+			transform: translateY(3px);
 			box-shadow: 0 0 1rem 0 ${(props) => props.theme.primary};
-			-webkit-box-reflect: below 0 linear-gradient(transparent, ${(props) => props.theme.primary});
-	}
-				
-	.btn:hover span:nth-child(1){
-		background-image: linear-gradient(90deg, transparent, ${(props) => props.theme.primary});
-		height: 3px;
-		left: 100%;
-		transition: 1s;
-			-webkit-transition: 1s;
-			-moz-transition: 1s;
-			-ms-transition: 1s;
-			-o-transition: 1s;
-	}
-	
-	.btn:hover span:nth-child(3){
-		background-image: linear-gradient(270deg, transparent, ${(props) => props.theme.primary});
-		height: 3px;
-		right: 100%;
-		transition: 1s;
-			-webkit-transition: 1s;
-			-moz-transition: 1s;
-			-ms-transition: 1s;
-			-o-transition: 1s;
-		transition-delay: 0.5s;
-	}
-	
-	.btn:hover span:nth-child(2){
-		background-image: linear-gradient(180deg, transparent, ${(props) => props.theme.primary});
-		width: 3px;
-		top: 100%;
-		transition: 1s;
-			-webkit-transition: 1s;
-			-moz-transition: 1s;
-			-ms-transition: 1s;
-			-o-transition: 1s;
-		transition-delay: 0.25s;
-	}
-	
-	.btn:hover span:nth-child(4){
-		background-image: linear-gradient(360deg, transparent, ${(props) => props.theme.primary});
-		width: 3px;
-		bottom: 100%;
-		transition: 1s;
-			-webkit-transition: 1s;
-			-moz-transition: 1s;
-			-ms-transition: 1s;
-			-o-transition: 1s;
-		transition-delay: 0.75s;
+				-webkit-transform: translateY(3px);
+				-moz-transform: translateY(3px);
+				-ms-transform: translateY(3px);
+				-o-transform: translateY(3px);
+				-webkit-box-reflect: below 0 linear-gradient(transparent, ${(props) => props.theme.primary});
+		}
+					
+		&:hover span:nth-child(1){
+			background-image: linear-gradient(90deg, transparent, ${(props) => props.theme.primary});
+			height: 3px;
+			left: 100%;
+			transition: 1s;
+				-webkit-transition: 1s;
+				-moz-transition: 1s;
+				-ms-transition: 1s;
+				-o-transition: 1s;
+		}
+
+
+		&:hover span:nth-child(3){
+			background-image: linear-gradient(270deg, transparent, ${(props) => props.theme.primary});
+			height: 3px;
+			right: 100%;
+			transition: 1s;
+				-webkit-transition: 1s;
+				-moz-transition: 1s;
+				-ms-transition: 1s;
+				-o-transition: 1s;
+			transition-delay: 0.5s;
+		}
+		
+		&:hover span:nth-child(2){
+			background-image: linear-gradient(180deg, transparent, ${(props) => props.theme.primary});
+			width: 3px;
+			top: 100%;
+			transition: 1s;
+				-webkit-transition: 1s;
+				-moz-transition: 1s;
+				-ms-transition: 1s;
+				-o-transition: 1s;
+			transition-delay: 0.25s;
+		}
+		
+		&:hover span:nth-child(4){
+			background-image: linear-gradient(360deg, transparent, ${(props) => props.theme.primary});
+			width: 3px;
+			bottom: 100%;
+			transition: 1s;
+				-webkit-transition: 1s;
+				-moz-transition: 1s;
+				-ms-transition: 1s;
+				-o-transition: 1s;
+			transition-delay: 0.75s;
+		}
+
+		&:hover {
+			border-color: ${(props) => props.theme.backgound};
+		}
+
+		.btn-primary {
+			background: ${(props) => props.theme.primary};
+		}
+
+		.btn-primary:hover {
+			background: none;
+		}
+
 	}
 
-	.btn:hover {
-		border-color: ${(props) => props.theme.backgound};
-	}
+	
 
-	.btn-primary {
-		background:${(props) => props.theme.primary};
-	}
-
-	.btn-primary:hover {
-		background: none;
-	}
 
 
 	@media screen and (min-width: 2160px) {
