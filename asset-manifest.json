@@ -1,20 +1,26 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d13f10b6.css",
-    "main.js": "/portfolio/static/js/main.7839eec0.js",
+    "main.js": "/portfolio/static/js/main.695c2ea2.js",
     "static/media/about04.png": "/portfolio/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/portfolio/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/Resume_Musfiquer_Rhman.pdf": "/portfolio/static/media/Resume_Musfiquer_Rhman.09f8da6daa53e7e26f30.pdf",
     "static/media/about01.png": "/portfolio/static/media/about01.080509de05322b7aafda.png",
+    "static/media/Nunnally.webp": "/portfolio/static/media/Nunnally.db3f091b99d493e6e2ef.webp",
     "static/media/about03.png": "/portfolio/static/media/about03.c26c2547bb1a423cf283.png",
     "static/media/about.webp": "/portfolio/static/media/about.3c5587c9f8e7236f6d9d.webp",
+    "static/media/C2.webp": "/portfolio/static/media/C2.a2ae5fb08180a97e5db0.webp",
+    "static/media/Kallen Stadtfeld.jpg": "/portfolio/static/media/Kallen Stadtfeld.060ab129e247bf095c66.jpg",
+    "static/media/Suzaku Kururugi.webp": "/portfolio/static/media/Suzaku Kururugi.458aac29eb30a3de81c0.webp",
+    "static/media/lelouch lamperouge.avif": "/portfolio/static/media/lelouch lamperouge.305e439a9d1dae79342b.avif",
     "static/media/hackerman.png": "/portfolio/static/media/hackerman.ed720abdf64a410c68cb.png",
+    "static/media/Shirleyfenette.webp": "/portfolio/static/media/Shirleyfenette.59008e8a158338ec2e0d.webp",
     "index.html": "/portfolio/index.html",
     "main.d13f10b6.css.map": "/portfolio/static/css/main.d13f10b6.css.map",
-    "main.7839eec0.js.map": "/portfolio/static/js/main.7839eec0.js.map"
+    "main.695c2ea2.js.map": "/portfolio/static/js/main.695c2ea2.js.map"
   },
   "entrypoints": [
     "static/css/main.d13f10b6.css",
-    "static/js/main.7839eec0.js"
+    "static/js/main.695c2ea2.js"
   ]
 }
