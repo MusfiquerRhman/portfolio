@@ -3,8 +3,7 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyles = createGlobalStyle`
     header {
         height: 100vh;
-        padding-top: 7rem;
-        overflow: hidden;
+        padding-top: 7em;
         color: ${(props) => props.theme.textColor}
     }
 
@@ -154,7 +153,6 @@ export const GlobalStyles = createGlobalStyle`
             }
         }
 
-
         .accordion__content {
             line-height: 1.6;
             font-size: 0.85em;
@@ -176,35 +174,107 @@ export const GlobalStyles = createGlobalStyle`
             .accent-color {
                 height: 50px;
                 width: 50px;
-                background: red;
                 margin: 1rem;
                 border-radius: 50%;
             }
-
-            .teal {
-                background: rgb(0, 137, 123);
-            }
-
-            .red {
-                background: rgb(244, 67, 54);
-            }
-
-            .pink {
-                background: rgb(233, 30, 99);
-            }
-
-            .purple {
-                background: rgb(165, 39, 176);
-            }
-
-            .blue {
-                background: rgb(33, 150, 243);
-            }
-
-            .green {
-                background: rgb(67, 160, 71);
-            }
         }
+    }
+
+    .teal {
+        background: rgb(0, 137, 123);
+    }
+
+    .red {
+        background: rgb(244, 67, 54);
+    }
+
+    .pink {
+        background: rgb(233, 30, 99);
+    }
+
+    .purple {
+        background: rgb(165, 39, 176);
+    }
+
+    .blue {
+        background: rgb(33, 150, 243);
+    }
+
+    .green {
+        background: rgb(67, 160, 71);
+    }
+
+
+    .mobile-navigation {
+        display: none;
+        color: ${(props) => props.theme.white};
+
+        .mobile-navigation__bars {
+            cursor: pointer;
+            position: absolute;
+            top: -3rem;
+            right: 2rem;
+        }
+
+        .bar {
+            display: block;
+            width: 2rem;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: ${(props) => props.theme.textColor};
+        }
+
+        .mobile-navigation__menu {
+            margin: 1rem 3%;
+            width: 94%;
+            background: ${(props) => props.theme.primary};
+            position: absolute;
+            top: -4rem;
+            left: 0;
+            right: 0;
+            border-radius: 1rem;
+            display: none;
+
+            .toggle-container {
+                display: flex;
+                justify-content: space-around;
+                margin: 2rem;
+            }
+
+            .mobile-navigation__close {
+                height: auto;
+                width: 15%;
+                padding: 0.5rem;
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 1.5rem;
+            }
+
+            .mobile-navigation__accents {
+
+                .accent-colors { 
+                    padding: 0.5rem;
+                    display: flex;
+                    justify-content: center;
+
+                    .accent-color {
+                        height: 40px;
+                        width: 40px;
+                        margin: 0.5rem;
+                        border-radius: 50%;
+                        border: 2px solid ${(props) => props.theme.white};
+                    }
+                }
+            }
+
+        }
+
+        .display {
+            display: block;
+        }
+
     }
 
 
@@ -227,6 +297,7 @@ export const GlobalStyles = createGlobalStyle`
         header {
             height: 140vh;
             overflow: auto; 
+            padding-top: 4em;
         }
 
         .header__container {
@@ -242,6 +313,7 @@ export const GlobalStyles = createGlobalStyle`
     @media screen and (max-width: 600px) and (min-height: 800px){
         header {
             height: 100vh;
+            padding-top: 5em;
         }
 
         .header__social {
@@ -250,6 +322,7 @@ export const GlobalStyles = createGlobalStyle`
 
         .header__container {
             width: 100%;
+            overflow: visible;
         }
         
         .header__social::before,
@@ -259,12 +332,17 @@ export const GlobalStyles = createGlobalStyle`
 
         .theme {
             display: none;
+        }
+
+        .mobile-navigation {
+            display: block;
         }
     }
 
     @media screen and (max-width: 600px) and (max-height: 800px){
         header {
             height: 120vh;
+            padding-top: 5em;
         }
 
         .header__social {
@@ -273,6 +351,7 @@ export const GlobalStyles = createGlobalStyle`
 
         .header__container {
             width: 100%;
+            overflow: visible;
         }
         
         .header__social::before,
@@ -282,6 +361,10 @@ export const GlobalStyles = createGlobalStyle`
 
         .theme {
             display: none;
+        }
+
+        .mobile-navigation {
+            display: block;
         }
     }
 `

@@ -14,7 +14,7 @@ const Nav = () => {
 	}, [inView])
 
 	return (
-		<>
+		<React.Fragment>
 			<GlobalStyles />
 			<nav>
 				<a href="#header" className={isActive === '#header' ? 'active' : ''}><AiOutlineHome /></a>
@@ -24,7 +24,7 @@ const Nav = () => {
 				<a href='#testimonial' className={isActive === '#testimonial' ? 'active' : ''}><AiOutlineMessage /></a>
 				<a href='#contact' className={isActive === '#contact' ? 'active' : ''}><AiOutlinePhone /></a>
 			</nav>
-		</>
+		</React.Fragment>
 	)
 }
 

@@ -50,7 +50,7 @@ const Testimonial = () => {
 	}, [setRef, visible])
 
 	return (
-		<>
+		<React.Fragment>
 		<GlobalStyles/>
 		<section id='testimonial' ref={setRef}>
 			<h5>Review from clients</h5>
@@ -75,7 +75,7 @@ const Testimonial = () => {
 				))}
 			</Swiper>
 		</section>
-		</>
+		</React.Fragment>
 	)
 }
 

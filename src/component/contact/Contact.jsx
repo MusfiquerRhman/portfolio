@@ -61,7 +61,7 @@ const Contact = () => {
 	};
 
 	return (
-		<>
+		<React.Fragment>
 			<GlobalStyles />
 			<section id='contact' ref={setRef}>
 				<h5>Get In Touch</h5>
@@ -103,7 +103,7 @@ const Contact = () => {
 					</form>
 				</div>
 			</section>
-		</>
+		</React.Fragment>
 	)
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Resume from '../../assests/Resume_Musfiquer_Rhman.pdf'
+import Resume from '../../../assests/Resume_Musfiquer_Rhman.pdf'
 import { useSnackbar } from 'notistack';
 
 const CTA = () => {

@@ -60,7 +60,7 @@ const Portfolio = () => {
 	};
 
 	return (
-		<>
+		<React.Fragment>
 		<GlobalStyles />
 		<section id='portfolio' ref={setRef}>
 			<h5>My Recent Works</h5>
@@ -101,7 +101,7 @@ const Portfolio = () => {
 				))}
 			</div>
 		</section>
-		</>
+		</React.Fragment>
 	)
 }
 

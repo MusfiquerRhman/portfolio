@@ -16,7 +16,7 @@ const Experience = () => {
 
 
 	return (
-		<>
+		<React.Fragment>
 		<GlobalStyles />
 		<section id='experience' ref={setRef}>
 			<h5>What Skills I have</h5>
@@ -114,7 +114,7 @@ const Experience = () => {
 				</div>
 			</div>
 		</section>
-	</>
+	</React.Fragment>
 	)
 }
 

@@ -5,7 +5,7 @@ import {BsLinkedin} from 'react-icons/bs'
 
 const Footer = () => {
 	return (
-		<>
+		<React.Fragment>
 			<GlobalStyles />
 			<footer className=''>
 			<a href='#header' className='footer__logo'>Musfiquer Rhman</a>
@@ -16,7 +16,7 @@ const Footer = () => {
 				<a href='https://www.facebook.com/musfiquerrhman' target='_blank' rel="noreferrer" ><FaFacebookSquare /></a>
 			</div>
 		</footer>
-		</>
+		</React.Fragment>
 	)
 }
 
