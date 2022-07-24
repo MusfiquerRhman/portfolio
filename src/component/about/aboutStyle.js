@@ -83,43 +83,6 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
 }
 
-@media screen and (min-width: 2160px) {
-    .about__container {
-        grid-template-columns: 1fr 2fr;
-        gap: 10%;
-    }
-
-    body {
-        font-size: 2.5rem;
-    }
-    .about__cards {
-        gap: 3rem;
-
-        h5 {
-            font-size: 3rem;
-        }
-    
-        small {
-            font-size: 2rem;
-        }
-    }
-
-    .about__icon {
-        font-size: 3.5rem;
-        margin-bottom: 2rem;   
-    }
-
-    .about__content p{
-        margin: 4rem 0;
-        font-size: 2rem;
-    }
-
-    .about__content .about__card {
-        border-radius: 2rem;
-        padding: 3rem 5rem;
-    }
-}
-
 
 @media screen and (max-width: 1024px) {
     .about__container {

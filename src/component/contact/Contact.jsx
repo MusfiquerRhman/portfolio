@@ -9,6 +9,9 @@ import { HiArrowRight } from 'react-icons/hi'
 import {GlobalStyles} from './contactStyle.js'
 import emailjs from '@emailjs/browser';
 import { useSnackbar } from 'notistack';
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
+import ScheduleSendIcon from '@mui/icons-material/ScheduleSend';
+import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 // import AppWrap from '../../wrapers/AppWrap'
 
@@ -16,14 +19,14 @@ const Contact = () => {
 	const { setInView } = useContext(InteractionContext);
 	const {theme} = useContext(ThemeContextAPI);
 	const [setRef, visible] = useOnScreen({ threshold: 0.7 });
-	const [buttonText, setButtonText] = useState('Send Message');
+	const [buttonText, setButtonText] = useState(('Send Message'));
+	const [sendButtonIcon, setSendButtonIcon] = useState(<ForwardToInboxIcon className='icon'/>);
 	const [inputBorderClass, setInputBorderClass] = useState("");
 
 	useEffect(() => {
 		const className = theme === 'light' ? 'border' : '';
 		setInputBorderClass(className);
 	}, [theme])
-
 
 	useEffect(() => {
 		if (visible) {
@@ -38,11 +41,13 @@ const Contact = () => {
 		e.preventDefault();
 		enqueueSnackbar("Sending Message...", {variant: 'info'})
 		setButtonText('Sending...')
+		setSendButtonIcon(<ScheduleSendIcon className='icon'/>);
 
 		emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE, process.env.REACT_APP_EMAIL_TEMPLETE, form.current, process.env.REACT_APP_USER_ID).then((result) => {
 			if(result.status === 200){
 				enqueueSnackbar("Message sent, Thanks for connecting", {variant: 'success'});
 				setButtonText('Message Sent!');
+				setSendButtonIcon(<MarkEmailReadIcon className='icon'/>);
 				setTimeout(() => {
 					setButtonText("Send Another Message!")
 				}, 5000)
@@ -84,17 +89,17 @@ const Contact = () => {
 						</article>
 					</div>
 
-					<form ref={form} onSubmit={sendEmail}>
+					<form ref={form}>
 						<input type="text" name="name" id="name" placeholder='Your Full Name' className={inputBorderClass} required />
 						<input type="email" name='email' id='email' placeholder='Your Email' className={inputBorderClass} required />
 						<textarea name="message" id="message" cols="30" rows="10" placeholder='Message' className={inputBorderClass} required></textarea>
-						<button type='submit' className='btn btn-primary'>
+						<a type='submit' className='btn btn-primary' onClick={sendEmail}>
 							<span></span>
 							<span></span>
 							<span></span>
 							<span></span>
-							{buttonText}
-						</button >
+							{sendButtonIcon} {buttonText}
+						</a>
 					</form>
 				</div>
 			</section>

@@ -166,16 +166,13 @@ export const GlobalStyles = createGlobalStyle`
 	.btn {
 		width: max-content;
 		display: inline-block;
-		color: ${(props) => props.theme.white};
+		color: ${(props) => props.theme.textColor};
 		padding: 0.75rem;
 		cursor: pointer;
 		overflow: hidden;
 		border: 1px solid ${(props) => props.theme.primary};
-		color: ${(props) => props.theme.textColor};
 		box-shadow: 0.1rem 0.1rem 0.2rem 0 ${(props) => props.theme.primary};
 		border-radius: 2px;
-		
-
 
 		& span{
 			position: absolute;
@@ -282,9 +279,10 @@ export const GlobalStyles = createGlobalStyle`
 			border-color: ${(props) => props.theme.backgound};
 		}
 
-		.btn-primary {
-			background: ${(props) => props.theme.primary};
-		}
+        .btn-primary {
+            font-weight: bold;
+            background: ${(props) => props.theme.primary};
+        }
 
 		.btn-primary:hover {
 			background: none;

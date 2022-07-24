@@ -2,8 +2,10 @@ import React, {useState, useEffect, useContext} from 'react'
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { ThemeContextAPI } from '../../context APIs/themeContextAPI'
 import { AccentContextAPI } from '../../context APIs/accentContextAPI';
+import { useSnackbar } from 'notistack';
 
 const Toggle = () => {
+    const { enqueueSnackbar } = useSnackbar();
     const [isLightMode, setIsLightMode] = useState(false)
     const [toggleClass, setToggleClass] = useState("");
 	const {setTheme} = useContext(ThemeContextAPI);
@@ -13,7 +15,8 @@ const Toggle = () => {
     const toggleTheme = () => {
         const newTheme = isLightMode === true ? false : true;
         setIsLightMode(newTheme);
-        setTheme(newTheme === true ? 'light' : 'dark')
+        setTheme(newTheme === true ? 'light' : 'dark');
+		enqueueSnackbar("Theme Changed!", {variant: 'success'});
     }
 
     useEffect(() => {
@@ -23,6 +26,7 @@ const Toggle = () => {
 
     const onClickAccent = (color) => {
         setAccentColor(color);
+		enqueueSnackbar(`Accent Color Changed!`, {variant: 'success'});
     }
 
     useEffect(() => {

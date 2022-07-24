@@ -17,14 +17,17 @@ export const GlobalStyles = createGlobalStyle`
             box-shadow: 0 0 0 1px ${(props) => props.theme.primaryColorVariant};
         }
 
-        .btn {
-            position: relative;
-            width: 50%;
+        .btn-primary {
+            width: 100%;
             font-size: 1.1rem;
-            left: 50%;
-            transform: translate(-50%);
-            background: ${(props) => props.theme.primary};
-            color: ${(props) => props.theme.white};
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+                margin: 0.25rem 1rem;
+            }
         }
 
         .contact__options {
@@ -87,6 +90,7 @@ export const GlobalStyles = createGlobalStyle`
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
+            
 
             input, textarea {
                 width: 100%;
@@ -96,12 +100,6 @@ export const GlobalStyles = createGlobalStyle`
                 resize: none;
             }
         }
-    }
-
-
-
-    @media screen and (min-width: 2160px) {
-
     }
 
 

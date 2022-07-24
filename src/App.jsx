@@ -16,7 +16,7 @@ function App() {
 	return (
 		<StyledApp>
 			<ThemeProvider theme={theme === "light" ? lightTheme(accent): darkTheme(accent)}>
-				<SnackbarProvider maxSnack={3}>
+				<SnackbarProvider maxSnack={4}>
 					<InteractionProvider>
 						<GlobalStyles/>
 						<Header />

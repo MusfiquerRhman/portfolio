@@ -12,6 +12,8 @@ export const GlobalStyles = createGlobalStyle`
         text-align: center;
         height: 100%;
         position: relative;
+        width: 50%;
+        overflow: hidden;
     }
 
     .cta {
@@ -19,12 +21,6 @@ export const GlobalStyles = createGlobalStyle`
         display: flex;
         gap: 1.2rem;
         justify-content: center;
-
-        .btn-primary {
-            font-weight: bold;
-            background: ${(props) => props.theme.primary};
-            color: ${(props) => props.theme.white};
-        }
     }
 
     .header__social {
@@ -103,7 +99,6 @@ export const GlobalStyles = createGlobalStyle`
             text-align: center;
         }
 
-
         .indicator {
             position: absolute;
             top: 0;
@@ -155,7 +150,7 @@ export const GlobalStyles = createGlobalStyle`
             }
 
             .icon {
-                    margin: 0.25rem;
+                margin: 0.25rem;
             }
         }
 
@@ -212,70 +207,80 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-   
 
     @media screen and (max-width: 1024px) {
         header {
             height: 85vh;
             overflow: auto; 
         }
-    }
 
-    @media screen and (min-width: 2160px) {
-        header {
-            padding-top: 10rem;
-            height: 70vh;
+        .header__container {
+            width: 100%;
         }
 
         .header__social {
-            gap: 2rem;
-            bottom: 3rem;
+            margin-left: 1rem;
+        }
+    }
 
-            a {
-                font-size: 2.5rem;
-            }
+    @media screen and (max-width: 1024px) and (max-height: 800px) {
+        header {
+            height: 140vh;
+            overflow: auto; 
         }
 
-        .scroll__down {
-            font-size: 2.5rem;
-            right: -5rem;
+        .header__container {
+            width: 100%;
         }
 
-        .cta {
-            margin-top: 5rem;
-            gap: 2rem;justify-content: center;
-
-            .btn, .btn-primary {
-                font-size: 2.5rem;
-            }
-
-        }
-
-        .me {
-            width: 30rem;
-            height: 30rem;
-            margin-top: 10rem;
-            border-radius: 24rem 24rem 0 0;
-            padding: 6rem 0 0 0;
+        .header__social {
+            margin-left: 2rem;
         }
     }
 
 
-
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) and (min-height: 800px){
         header {
             height: 100vh;
         }
-        .scroll__down {
-            display: none;
-        }
 
         .header__social {
             display: none;
+        }
+
+        .header__container {
+            width: 100%;
         }
         
         .header__social::before,
         .header__social::after {
+            display: none;
+        }
+
+        .theme {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 600px) and (max-height: 800px){
+        header {
+            height: 120vh;
+        }
+
+        .header__social {
+            display: none;
+        }
+
+        .header__container {
+            width: 100%;
+        }
+        
+        .header__social::before,
+        .header__social::after {
+            display: none;
+        }
+
+        .theme {
             display: none;
         }
     }

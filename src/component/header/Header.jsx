@@ -7,6 +7,7 @@ import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
 import Toggle from './themeToggle'
 
+
 const Header = () => {
 	const {setInView} = useContext(InteractionContext);
     const [setRef, visible] = useOnScreen({threshold: 0.7});

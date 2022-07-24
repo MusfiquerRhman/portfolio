@@ -76,22 +76,6 @@ export const GlobalStyles = createGlobalStyle`
     }
 
 
-
-    @media screen and (min-width: 2160px) {
-        .portfolio__container {
-            gap: 4rem;
-        }
-
-        .portfolio__item {
-            padding: 1.5rem;
-            border-radius: 4rem;
-        
-            h3 {
-                margin: 2rem 0 4rem;
-            }
-        }
-    }
-
     @media screen and (max-width: 1024px) {
         .portfolio__container {
             grid-template-columns: repeat(2, 1fr);

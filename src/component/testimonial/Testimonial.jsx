@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
-import cliantAvater from '../../assests/hackerman.png';
+import {LelouchAvater, KallenStadtfeldAvater, NunnallyAvater, C2Avater, ShirleyFenetteAvater, SuzakuKururugiAvater} from '../../assests';
 import './testimonialStyle.js'
 import {GlobalStyles} from './testimonialStyle'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,27 +12,27 @@ import { Navigation, Pagination } from "swiper";
 
 const data = [
 	{
-		image: cliantAvater,
+		image: LelouchAvater,
 		cliantName: 'Lelouch Lamperouge',
 		review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus consequatur eos doloribus saepe? Incidunt nihil, magni ex nesciunt omnis atque placeat a, aperiam vero officiis, esse ut id reiciendis?'
 	}, {
-		image: cliantAvater,
+		image: ShirleyFenetteAvater,
 		cliantName: 'Shirley Fenette',
 		review: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero ut fugit id nihil omnis hic iusto dignissimos beatae veritatis dolor velit voluptatibus asperiores, perferendis minima repellat aperiam. Sequi repellat, vero libero adipisci commodi dolorum quia in saepe, aut tenetur placeat.'
 	}, {
-		image: cliantAvater,
+		image: SuzakuKururugiAvater,
 		cliantName: 'Suzaku Kururugi',
 		review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex temporibus sequi sed velit obcaecati.'
 	}, {
-		image: cliantAvater,
+		image: KallenStadtfeldAvater,
 		cliantName: 'Kallen Stadtfeld',
 		review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus consequatur eos doloribus saepe? Incidunt nihil, magni ex nesciunt omnis atque placeat a, aperiam vero officiis, esse ut id reiciendis?'
 	}, {
-		image: cliantAvater,
+		image: NunnallyAvater,
 		cliantName: 'Nunnally',
 		review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis consequat omnis atque placeat a, aperiam vero officiis, esse ut id reiciendis?'
 	}, {
-		image: cliantAvater,
+		image: C2Avater,
 		cliantName: 'C.C.',
 		review: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum provident, sint necessitatibus quibusdam voluptates vel. Vel numquam perspiciatis atque voluptas repellendus hic dolorem. Quod, nemo!'
 	},

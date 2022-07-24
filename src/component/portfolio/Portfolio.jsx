@@ -2,10 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import useOnScreen from '../../hooks/useOnScreen'
 import { InteractionContext } from '../../context APIs/interactionAPI'
 import {GlobalStyles} from './portfolioStyles'
-import about01 from '../../assests/about01.png'
-import about02 from '../../assests/about02.png'
-import about03 from '../../assests/about03.png'
-import about04 from '../../assests/about04.png'
+import {about01, about02, about03, about04} from '../../assests'
 
 const data = [
 	{

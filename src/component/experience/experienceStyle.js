@@ -40,36 +40,6 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
-
-    @media screen and (min-width: 2160px) {
-        .experience__container {
-            gap: 5rem;
-
-            & > div {
-                margin-top: 2rem;
-                padding: 5rem 7rem;
-                border-radius: 2rem;
-        
-                h3 {
-                    margin-bottom: 4rem;
-                }
-        
-                .experience__content {
-                    row-gap: 2.5rem;
-        
-                    .experience__details {
-                        gap: 2rem;
-                    }
-        
-                    .experience__details-icons {
-                        margin-top: 1rem;
-                    }
-                }
-            }
-        }
-    }
-
-
     @media screen and (max-width: 1024px) {
         .experience__container {
             grid-template-columns: 1fr;
